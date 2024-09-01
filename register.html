@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/register.css" />
     <title>Cadastro de clientes</title>
   </head>
   <body>
@@ -23,28 +26,51 @@
         </div>
       </div>
 
-      <form action="post" class="register_form">
+      <form
+        action="post"
+        class="register_form"
+        onsubmit="return validateForm()"
+      >
+        <p id="error-message"></p>
         <input
           type="text"
           name="name"
           id="name"
           placeholder="Digite seu nome"
           required
+          minlength="5"
+          maxlength="50"
         />
+        <span id="nomeErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
         <input
           type="text"
           name="company_name"
           id="company_name"
           placeholder="Digite o nome da sua empresa"
+          minlength="5"
+          maxlength="150"
           required
         />
+        <span id="companyNameErrorMessage" class="form-error-message">
+          Este campo é obrigatório. Por favor digite o nome da sua empresa
+        </span>
+
         <input
           type="number"
           name="cnpj"
           id="company_cnpj"
           placeholder="CNPJ"
+          title="Por favor, preencha o CNPJ da sua empresa."
           required
         />
+
+        <span id="CNPJErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
         <input
           type="email"
           name="email"
@@ -52,6 +78,16 @@
           placeholder="E-mail"
           required
         />
+
+        <span id="emailRequiredErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
+        <span id="emailErrorMessage" class="form-error-message">
+          Por favor, digite um endereço de e-mail válido. exemplo:
+          maria@email.com
+        </span>
+
         <input
           type="file"
           name="company_logo"
@@ -63,7 +99,6 @@
           name="password"
           id="password"
           placeholder="Digite sua senha"
-          required
         />
         <input
           type="password"
@@ -75,5 +110,7 @@
         <button class="button-overWhite" type="submit">Cadastrar</button>
       </form>
     </div>
+
+    <script src="./js/register.js"></script>
   </body>
 </html>

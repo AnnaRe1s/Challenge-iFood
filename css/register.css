@@ -35,3 +35,12 @@ form input {
   padding: 12px;
   border-radius: 11px;
 }
+
+.form-error-message {
+  color: var(--error-color);
+  display: none;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 6px;
+  font-weight: 300;
+}

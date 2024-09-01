@@ -13,7 +13,6 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/acessPage.css" />
-    <link rel="stylesheet" href="./css/register.css" />
 
     <title>MunchMoney</title>
   </head>
@@ -28,7 +27,13 @@
         class="logo"
       />
       <div class="button-container">
-        <button class="button-standard" id="btn-register">Cadastro</button>
+        <button
+          class="button-standard"
+          id="btn-register"
+          onclick="redirectToRegister()"
+        >
+          Cadastro
+        </button>
         <button class="button-overWhite" id="btn-login">Login</button>
       </div>
     </div>
@@ -36,5 +41,6 @@
 
     <!-- Js -->
     <script src="./js/index.js"></script>
+    <script src="./js/register.js"></script>
   </body>
 </html>
