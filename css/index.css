@@ -10,9 +10,31 @@
   --primary-color: #ee6829;
   --color-secondary: #ffe8bc;
   --white-text-color: #fff9f5;
+  --white: #fff9f5;
   --black-text-color: #2b2b2b;
   --sucess-color: #27a460;
   --error-color: #c20606;
   --black: #000;
   --gray: #828282;
+}
+
+.button-standard {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+.button-overWhite {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  margin-bottom: 15px;
+  width: 90%;
 }
