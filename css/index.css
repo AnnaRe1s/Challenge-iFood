@@ -38,3 +38,15 @@
   margin-bottom: 15px;
   width: 90%;
 }
+
+h1 {
+  color: var(--primary-color);
+  font-weight: 400;
+  text-align: center;
+  margin: 15px 0;
+}
+
+p {
+  color: var(--gray);
+  text-align: justify;
+}
