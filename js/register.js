@@ -1,41 +1,30 @@
-const nomeInput = document.getElementById("name");
-const nomeErrorMessage = document.getElementById("nomeErrorMessage");
+// Function to toggle error message visibility
+function toggleErrorMessage(messageElement, show) {
+  messageElement.style.display = show ? "block" : "none";
+}
 
-nomeInput.addEventListener("invalid", function () {
-  nomeErrorMessage.style.display = "block";
-});
+// Function to validate email format
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
-nomeInput.addEventListener("input", function () {
-  nomeErrorMessage.style.display = "none";
-});
+// Function to validate password match
+function validatePasswordMatch(password, confirmPassword) {
+  return password.value === confirmPassword.value;
+}
 
-//COMPANY NAME
-const nomeInputCompany = document.getElementById("company_name");
-const nomeErrorMessageNameCompany = document.getElementById(
+// Get references to all input and error message elements
+const nameInput = document.getElementById("name");
+const nameErrorMessage = document.getElementById("nomeErrorMessage");
+
+const companyNameInput = document.getElementById("company_name");
+const companyNameErrorMessage = document.getElementById(
   "companyNameErrorMessage"
 );
 
-nomeInputCompany.addEventListener("invalid", function () {
-  nomeErrorMessageNameCompany.style.display = "block";
-});
-
-nomeInputCompany.addEventListener("input", function () {
-  nomeErrorMessageNameCompany.style.display = "none";
-});
-
-// CNPJ
 const cnpjInput = document.getElementById("company_cnpj");
 const cnpjErrorMessage = document.getElementById("CNPJErrorMessage");
-
-cnpjInput.addEventListener("invalid", function () {
-  cnpjErrorMessage.style.display = "block";
-});
-
-cnpjInput.addEventListener("input", function () {
-  cnpjErrorMessage.style.display = "none";
-});
-
-//email
 
 const emailInput = document.getElementById("email");
 const emailErrorMessage = document.getElementById("emailErrorMessage");
@@ -43,21 +32,45 @@ const emailRequiredErrorMessage = document.getElementById(
   "emailRequiredErrorMessage"
 );
 
-emailInput.addEventListener("input", () => {
-  // Verifica se o e-mail é válido usando uma expressão regular
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirm_password");
+const passwordErrorMessage = document.getElementById("passwordErrorMessage");
+const notMatchPasswordErrorMessage = document.getElementById(
+  "notMatchPasswordErrorMessage"
+);
 
-  if (!emailRegex.test(emailInput.value)) {
-    emailErrorMessage.style.display = "block";
-  } else {
-    emailErrorMessage.style.display = "none";
-  }
+// Event listeners for common validation
+
+nameInput.addEventListener("invalid", () =>
+  toggleErrorMessage(nameErrorMessage, true)
+);
+companyNameInput.addEventListener("invalid", () =>
+  toggleErrorMessage(companyNameErrorMessage, true)
+);
+cnpjInput.addEventListener("invalid", () =>
+  toggleErrorMessage(cnpjErrorMessage, true)
+);
+password.addEventListener("invalid", () =>
+  toggleErrorMessage(passwordErrorMessage, true)
+);
+
+// Event listener for email (combined validation)
+emailInput.addEventListener("input", () => {
+  const emailValid = validateEmail(emailInput.value);
+  toggleErrorMessage(emailRequiredErrorMessage, !emailInput.value);
+  toggleErrorMessage(emailErrorMessage, !emailValid);
 });
 
-emailInput.addEventListener("invalid", function () {
-  if (emailInput.value) {
-    emailRequiredErrorMessage.style.display = "none";
-  } else {
-    emailRequiredErrorMessage.style.display = "block";
+// Event listener for password confirmation (re-enable validation on input)
+password.addEventListener("input", () => {
+  confirmPassword.removeAttribute("required");
+  notMatchPasswordErrorMessage.style.display = "none";
+});
+
+confirmPassword.addEventListener("input", () => {
+  if (password.value) {
+    confirmPassword.setAttribute("required");
+    const passwordsMatch = validatePasswordMatch(password, confirmPassword);
+    toggleErrorMessage(notMatchPasswordErrorMessage, !passwordsMatch);
   }
 });

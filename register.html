@@ -99,14 +99,21 @@
           name="password"
           id="password"
           placeholder="Digite sua senha"
+          required
         />
+        <span id="passwordErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
         <input
           type="password"
           name="confirm_password"
           id="confirm_password"
           placeholder="Confirme a senha"
         />
-
+        <span id="notMatchPasswordErrorMessage" class="form-error-message">
+          Senhas não conferem por favor tente novamente.
+        </span>
         <button class="button-overWhite" type="submit">Cadastrar</button>
       </form>
     </div>
