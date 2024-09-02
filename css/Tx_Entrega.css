@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  :root {
+    --primary-color: #ee6829;
+    --color-secondary: #ffe8bc;
+    --white-text-color: #fff9f5;
+    --black-text-color: #2b2b2b;
+    --sucess-color: #27a460;
+    --error-color: #c20606;
+    --black: #000;
+    --gray: #828282;
+  }
+  
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.gay {
+  width: 430px; 
+
+  }
+
+  .button{
+    
+  }
+  
+
+
+ 
+  
