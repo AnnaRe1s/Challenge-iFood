@@ -3,9 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+
     <title>Login</title>
   </head>
   <body>
-    <h1>faca seu login aqui</h1>
+    <div class="register-header-form">
+      <div class="register-header">
+        <img
+          src="./assets/logo_colors.png"
+          alt="munchMoney em parceria com o ifood"
+          class="logo"
+        />
+
+        <div class="text-header">
+          <h1>Login</h1>
+          <p>Bem-vindo de volta ao Munch Money</p>
+        </div>
+      </div>
+
+      <form action="post" method="post" onsubmit="return validateForm()">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          required
+        />
+
+        <span id="emailRequiredErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
+        <span id="emailErrorMessage" class="form-error-message">
+          Por favor, digite um endereço de e-mail válido. exemplo:
+          maria@email.com
+        </span>
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Digite sua senha"
+          required
+        />
+        <span id="passwordErrorMessage" class="form-error-message">
+          Este campo é obrigatório.
+        </span>
+
+        <button class="button-overWhite" type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <script src="./js/login.js"></script>
   </body>
 </html>
