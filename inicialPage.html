@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/inicialPage.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Pagina inicial</title>
+  </head>
+  <body>
+    <div class="register-form">
+      <img
+        src="./assets/logo_colors.png"
+        alt="munchMoney em parceria com o ifood"
+        class="logo"
+      />
+
+      <div class="button-container">
+        <button
+          class="button-standard"
+          id="btn-register"
+          onclick="redirectToRegister()"
+        >
+          Cadastro
+        </button>
+        <button
+          class="button-overWhite"
+          id="btn-login"
+          onclick="redirectToLogin()"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+
+    <!-- Js -->
+    <script src="./js/index.js"></script>
+    <script src="./js/register.js"></script>
+  </body>
+</html>
