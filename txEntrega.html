@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap" rel="stylesheet">
+  <title>Relatório   
+ de Entregas</title>
+  <link rel="stylesheet" href="./css/txEntrega.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="orangeBox"> 
+        <div class="backBtn">
+          <button class="back" type="button"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.39997 10.2L1.59998 5.99995L6.39997 1.79995" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></button>
+        </div>
+        <div class="header1"> 
+          <h6 class="textPrincipal">Valor gasto com taxas de entrega</h6>
+          <h2 class="valorPrincipal">R$ 1425,00 </h2>
+        </div>
+        <div class="header2">
+          <div class="left"> 
+            <p class="textSecond">Valor medio por entrega </p>
+            <h4 class="valorSecond">R$ 4,00</h4>    
+          </div>
+          <div class="right">
+            <div class="addBtn">
+              <button  id="abrirModal" class="add" type="button"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1H1M1 5H10M7 9H1M11 9H17M14 6V12" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                      <button class="fechar"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 40.1293C31.0457 40.1293 40 31.1461 40 20.0647C40 8.98325 31.0457 0 20 0C8.95431 0 0 8.98325 0 20.0647C0 31.1461 8.95431 40.1293 20 40.1293Z" fill="#C20606"/>
+                        <path d="M24.8 15.249L15.2 24.8801M15.2 15.249L24.8 24.8801" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                      <p class="popTxt">Adicionar taxa ou pagamento de entrega</p>
+                      <label for="data-pagamento" >Data de pagamento</label>
+                      <input type="date" id="data-pagamento" class="input-field_1">
+                      
+                      <label for="valor-pagamento" class="vlPgto"></label>
+                      <input type="text" id="valor-pagamento" class="input-field_2" placeholder="Valor do pagamento">
+                      
+                      <button class="save-button">Salvar</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="filters">
+        <button class="filter-button">Mês</button>
+        <button class="filter-button">3 Meses</button>
+        <button class="filter-button">1 Ano</button>
+      </div>
+
+    </header>
+    <section class="totalEnt">
+      <div>
+        <p class="realizadas">Total de entregas realizadas</p>
+        <p class="ultimoMes"> últimos 3 meses </p>
+      <div class="motoSvg">
+        <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.70588 26.8824V29.2353C5.70588 30.4834 6.20168 31.6803 7.0842 32.5629C7.96673 33.4454 9.16369 33.9412 10.4118 33.9412C11.6598 33.9412 12.8568 33.4454 13.7393 32.5629C14.6218 31.6803 15.1176 30.4834 15.1176 29.2353V17.4706H8.05882C6.18671 17.4706 4.39127 18.2143 3.06748 19.5381C1.7437 20.8619 1 22.6573 1 24.5294V26.8824H24.5294C25.4015 24.3627 26.9693 22.1415 29.0513 20.4759C31.1334 18.8103 33.6445 17.7683 36.2941 17.4706V5.70588C36.2941 4.4578 35.7983 3.26084 34.9158 2.37832C34.0333 1.4958 32.8363 1 31.5882 1H29.2353M8.05882 10.4118H15.1176M31.5882 29.2353C31.5882 30.4834 32.084 31.6803 32.9666 32.5629C33.8491 33.4454 35.046 33.9412 36.2941 33.9412C37.5422 33.9412 38.7392 33.4454 39.6217 32.5629C40.5042 31.6803 41 30.4834 41 29.2353C41 27.9872 40.5042 26.7903 39.6217 25.9077C38.7392 25.0252 37.5422 24.5294 36.2941 24.5294C35.046 24.5294 33.8491 25.0252 32.9666 25.9077C32.084 26.7903 31.5882 27.9872 31.5882 29.2353Z" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+        <p class=>3.260</p>
+
+      </div>
+      </div>
+      <div class="dash1">
+        <p class="txDash">Valor pago por entrega por mês</p>
+        <div class="moneyIcon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.6667 10.9999C20.3647 10.4761 19.9261 10.0444 19.3976 9.75078C18.8692 9.45719 18.2708 9.31285 17.6667 9.33319H14.3333C13.4493 9.33319 12.6014 9.68438 11.9763 10.3095C11.3512 10.9346 11 11.7825 11 12.6665C11 13.5506 11.3512 14.3984 11.9763 15.0235C12.6014 15.6487 13.4493 15.9999 14.3333 15.9999H17.6667C18.5507 15.9999 19.3986 16.351 20.0237 16.9762C20.6488 17.6013 21 18.4491 21 19.3332C21 20.2172 20.6488 21.0651 20.0237 21.6902C19.3986 22.3153 18.5507 22.6665 17.6667 22.6665H14.3333C13.7292 22.6869 13.1308 22.5425 12.6024 22.2489C12.0739 21.9553 11.6353 21.5236 11.3333 20.9999M16 7.66667V24.3333M1 16C1 17.9698 1.38799 19.9204 2.14181 21.7403C2.89563 23.5601 4.00052 25.2137 5.3934 26.6066C6.78628 27.9995 8.43986 29.1044 10.2597 29.8582C12.0796 30.612 14.0302 31 16 31C17.9698 31 19.9204 30.612 21.7403 29.8582C23.5601 29.1044 25.2137 27.9995 26.6066 26.6066C27.9995 25.2137 29.1044 23.5601 29.8582 21.7403C30.612 19.9204 31 17.9698 31 16C31 14.0302 30.612 12.0796 29.8582 10.2597C29.1044 8.43986 27.9995 6.78628 26.6066 5.3934C25.2137 4.00052 23.5601 2.89563 21.7403 2.14181C19.9204 1.38799 17.9698 1 16 1C14.0302 1 12.0796 1.38799 10.2597 2.14181C8.43986 2.89563 6.78628 4.00052 5.3934 5.3934C4.00052 6.78628 2.89563 8.43986 2.14181 10.2597C1.38799 12.0796 1 14.0302 1 16Z" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p> 2.297,94 </p>
+           
+
+        </div>
+        <canvas  id="grafico-pagamento"> </canvas>
+        <div class="dash2">
+          <div class="textBox">
+          <p class="txDash">Valor taxas entrega</p>
+          <p class="txDash2">3 meses</p>
+          </div>
+          <div class="moneyIcon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.6667 10.9999C20.3647 10.4761 19.9261 10.0444 19.3976 9.75078C18.8692 9.45719 18.2708 9.31285 17.6667 9.33319H14.3333C13.4493 9.33319 12.6014 9.68438 11.9763 10.3095C11.3512 10.9346 11 11.7825 11 12.6665C11 13.5506 11.3512 14.3984 11.9763 15.0235C12.6014 15.6487 13.4493 15.9999 14.3333 15.9999H17.6667C18.5507 15.9999 19.3986 16.351 20.0237 16.9762C20.6488 17.6013 21 18.4491 21 19.3332C21 20.2172 20.6488 21.0651 20.0237 21.6902C19.3986 22.3153 18.5507 22.6665 17.6667 22.6665H14.3333C13.7292 22.6869 13.1308 22.5425 12.6024 22.2489C12.0739 21.9553 11.6353 21.5236 11.3333 20.9999M16 7.66667V24.3333M1 16C1 17.9698 1.38799 19.9204 2.14181 21.7403C2.89563 23.5601 4.00052 25.2137 5.3934 26.6066C6.78628 27.9995 8.43986 29.1044 10.2597 29.8582C12.0796 30.612 14.0302 31 16 31C17.9698 31 19.9204 30.612 21.7403 29.8582C23.5601 29.1044 25.2137 27.9995 26.6066 26.6066C27.9995 25.2137 29.1044 23.5601 29.8582 21.7403C30.612 19.9204 31 17.9698 31 16C31 14.0302 30.612 12.0796 29.8582 10.2597C29.1044 8.43986 27.9995 6.78628 26.6066 5.3934C25.2137 4.00052 23.5601 2.89563 21.7403 2.14181C19.9204 1.38799 17.9698 1 16 1C14.0302 1 12.0796 1.38799 10.2597 2.14181C8.43986 2.89563 6.78628 4.00052 5.3934 5.3934C4.00052 6.78628 2.89563 8.43986 2.14181 10.2597C1.38799 12.0796 1 14.0302 1 16Z" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p> 1.841,76 </p>
+          </div>
+          <canvas  id="grafico-taxas"> </canvas>
+        </div>
+
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/txEntrega.js"></script>
+
+</body>
+</html>

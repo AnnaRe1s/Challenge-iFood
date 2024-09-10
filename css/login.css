@@ -1,0 +1,10 @@
+.text-btn {
+  font-size: 14px;
+  border: none;
+  text-align: end;
+  width: 85%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: var(--primary-color);
+  background-color: none;
+}
