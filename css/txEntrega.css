@@ -207,6 +207,7 @@ canvas{
 .modal {
   display: none; 
   position: fixed;
+  max-width: auto;
   z-index: 1; 
   left: 0;
   top: 0;
@@ -225,10 +226,9 @@ canvas{
   margin: auto;
   padding: 20px;
   border-radius: 10px;
-  width: 430px;
+  max-width: auto  ;
+  width: 80%;
   position: relative;
-  text-align: center;
-
 }
 
 
@@ -244,9 +244,8 @@ canvas{
 
 /* Campo de entrada */
 .input-field_1{
-  width: 350px;
+  width: 90%;
   height: 50px;
-  margin: 0px 25px 22px 25px ;
   border: 1px solid var(--primary-color);
   border-radius: 10px;  
   color: var(--gray);
@@ -257,17 +256,24 @@ canvas{
 }
 
 .input-field_2{
-  width: 350px;
-  height: 50px;
   margin: 10px 0;
+  width: 90%;
+  height: 50px;
   border: 1px solid var(--primary-color);
   border-radius: 10px;  
+  color: var(--gray);
+  text-align: left;
+  padding-left: 16px;
   background-color:var(--white);
   
-  
+
 }
 
-/* Botão de salvar */
+.popTxt2{
+  display: flex;
+  align-items: start;
+}
+
 .save-button {
   background-color: var(--primary-color);
   color: white;
@@ -276,7 +282,6 @@ canvas{
   cursor: pointer;
   border-radius: 10px;
   width: 90%;
-  height: 60px;
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -288,6 +293,7 @@ canvas{
   font-size: x-large;
   font-style: none;
   padding: 30px;;
+  text-align: center;
 }
 
 
