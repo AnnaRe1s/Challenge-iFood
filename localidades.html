@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Faturamento</title>
+    <link rel="stylesheet" href="css/localidades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+</head>
+<body>
+    <div class="container">
+        <!-- Localidades e Faturamento -->
+        <div class="localidades">  
+            <a href="inicialPage.html" class="back-button">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+            </a>           
+            <div class="card">                               
+                <p>O bairro que você mais vendeu esse mês foi</p>
+                <h1 id="bairro-destaque">Bairro Santa Terezinha - SP</h1>
+                <p class="faturamento">Faturamento de <strong id="faturamento-destaque">R$ 8.124,76</strong></p>
+            </div>
+        </div>
+
+        <!-- Campeão de Vendas por Bairro -->
+        <div class="campeao-bairros">
+            <h3>Campeão de vendas em:</h3>
+            <div class="bar">
+                <label id="bairro1-label">Bairro Santa Terezinha - SP</label>
+                <progress id="bairro1-progress" value="0" max="100"></progress>
+                <span id="bairro1-total"></span>
+            </div>
+            <div class="bar">
+                <label id="bairro2-label">Bairro Dona Maria - SP</label>
+                <progress id="bairro2-progress" value="0" max="100"></progress>
+                <span id="bairro2-total"></span>
+            </div>
+            <div class="bar">
+                <label id="bairro3-label">Bairro Drice Madalena - SP</label>
+                <progress id="bairro3-progress" value="0" max="100"></progress>
+                <span id="bairro3-total"></span>
+            </div>
+        </div>
+
+        <!-- Produto Campeão de Vendas -->
+        <div class="campeao-produto">
+            <h3>Produto Campeão de vendas:</h3>
+            <div class="bar">
+                <label id="produto1-label">Vegan Burger - Abobrinha</label>
+                <progress id="produto1-progress" value="0" max="100"></progress>
+                <span id="produto1-total"></span>
+            </div>
+            <div class="bar">
+                <label id="produto2-label">Big Bacon Burger</label>
+                <progress id="produto2-progress" value="0" max="100"></progress>
+                <span id="produto2-total"></span>
+            </div>
+            <div class="bar">
+                <label id="produto3-label">Batata Premium</label>
+                <progress id="produto3-progress" value="0" max="100"></progress>
+                <span id="produto3-total"></span>
+            </div>
+            <div class="bar">
+                <label id="produto4-label">Refrigerante</label>
+                <progress id="produto4-progress" value="0" max="100"></progress>
+                <span id="produto4-total"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/localidades.js"></script>
+</body>
+</html>
