@@ -1,1 +1,136 @@
-// Este arquivo pode conter as estilizações correspondentes ao designer do projeto
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.header-container {
+  background-color: #ee6829;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button img,
+.notification-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.user-name {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.user-name span {
+  margin-left: 5px;
+}
+
+.saldo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.saldo-container h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: #ffe8bc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.action-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #ee6829;
+  display: flex;
+  align-items: center;
+}
+
+.filter-button::before,
+.add-button::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: #ee6829;
+  mask: url('./assets/icon-placeholder.png') no-repeat center;
+  -webkit-mask: url('./assets/icon-placeholder.png') no-repeat center;
+}
+
+.filter-button::before {
+  mask: url('./assets/filter-icon.png');
+  -webkit-mask: url('./assets/filter-icon.png');
+}
+
+.add-button::before {
+  mask: url('./assets/add-icon.png');
+  -webkit-mask: url('./assets/add-icon.png');
+}
+
+//Estilos para o Gráfico no CSS
+.chart-container {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff9f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+//Adicionamos o estilo para os cartões de extrato.
+.extrato-detalhado-container {
+  margin-top: 20px;
+}
+
+.extrato-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.extrato-header {
+  font-weight: bold;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.entradas, .saidas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entradas-titulo, .saidas-titulo {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.valor {
+  font-weight: bold;
+}
+
+.positivo {
+  color: #27a460; /* Cor de sucesso */
+}
+
+.negativo {
+  color: #c20606; /* Cor de erro */
+}

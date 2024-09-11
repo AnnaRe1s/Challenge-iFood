@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extrato Bancário</title>
   <link rel="stylesheet" href="./css/extrato.css" />
+  <!-- Adicionando o Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
 <div class="header-container">
   <div class="header-top">
     <button class="back-button">
@@ -22,14 +25,34 @@
     <span>Saldo</span>
     <h1>R$ 679,28</h1>
   </div>
-  <div class="Grafico">
-    <span>Faturamento</span>
-    <h2>Esboso do grafico</h2>
-  </div>
   <div class="action-buttons">
     <button class="filter-button">Filtro</button>
     <button class="add-button">Adicionar</button>
   </div>
+
+  <div class="extrato-detalhado-container">
+    <h2>Extrato Detalhado</h2>
+
+    <div class="extrato-card">
+      <div class="extrato-header">
+        <span>01/03/2023 - Quarta-feira</span>
+      </div>
+      <div class="entradas">
+        <p class="entradas-titulo">entradas</p>
+        <p>ifood ltda <span class="valor positivo">R$ 530,75</span></p>
+      </div>
+      <div class="saidas">
+        <p class="saidas-titulo">saídas</p>
+        <p>Taxa entrega ifood <span class="valor negativo">R$ 151,23</span></p>
+      </div>
+    </div>
+
+    <!-- Repetir o bloco acima para mais dias -->
+  </div>
+
 </div>
+
+<!-- Script para gerar o gráfico -->
+<script src="./js/extrato.js"></script>
 </body>
 </html>
