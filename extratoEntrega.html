@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato de Entregas</title>
+    <link rel="stylesheet" href="./css/extratoEntrega.css">
+    <script defer src="./js/extratoEntrega.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="orangeBox"> 
+        <div class="backBtn">
+          <button class="back" type="button"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.39997 10.2L1.59998 5.99995L6.39997 1.79995" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></button>
+        </div>
+        <div class="header1"> 
+          <h6 class="textPrincipal">Valor gasto com taxas de entrega</h6>
+          <h2 class="valorPrincipal">R$ 1425,00 </h2>
+        </div>
+        <div class="header2">
+          <div class="left"> 
+            <p class="textSecond">Valor medio por entrega </p>
+            <h4 class="valorSecond">R$ 4,00</h4>    
+          </div>
+          <div class="right">
+            <div class="addBtn">
+              <button  id="abrirModal" class="add" type="button"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1H1M1 5H10M7 9H1M11 9H17M14 6V12" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
+               
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="filters">
+        <button class="filter-button">Mês</button>
+        <button class="filter-button">3 Meses</button>
+        <button class="filter-button">1 Ano</button>
+      </div>
+
+    </header>
+    <!-- Expense List Section -->
+    <section class="expense-list">
+        <!-- Editable Section (Open by default) -->
+        <div class="expense-item">
+          <p class="mes">Fevereiro 2024</p>
+          <p>iFood Tx Entrega <span class="expense-value">R$ 520,79</span></p>
+          <p>Taxas de Entrega Loja <span class="txValue">R$ 124,68</span></p>
+          <input type="text" class="edit-input" value="R$ 124,68" style="display: none;">
+          <button class="edit-confirm" style="display: none;">✔</button>
+          <button class="edit-cancel" style="display: none;">✖</button>
+          <button class="edit-button">✏️</button>
+      </div>
+
+        <!-- Non-editable sections (Closed by default) -->
+        <div class="expense-item">
+            <p class="mes">Janeiro 2024</p>
+            <p>iFood Tx Entrega <span class="expense-value">R$ 520,79</span></p>
+            <p>Taxas de Entrega Loja <span class="txValue">R$ 124,68</span></p>
+            <input type="text" class="edit-input" value="R$ 124,68" style="display: none;">
+            <button class="edit-confirm" style="display: none;">✔</button>
+            <button class="edit-cancel" style="display: none;">✖</button>
+            <button class="edit-button">✏️</button>
+        </div>
+        <div class="expense-item">
+            <p class="mes">Dezembro 2023</p>
+            <p class="iFood">iFood Tx Entrega <span class="expense-value">R$ 520,79</span></p>
+            <p>Taxas de Entrega Loja <span class="expense-value">R$ 124,68</span></p>
+            <input type="text" class="edit-input" value="R$ 124,68" style="display: none;">
+            <button class="edit-confirm" style="display: none;">✔</button>
+            <button class="edit-cancel" style="display: none;">✖</button>
+            <button class="edit-button">✏️</button>
+        </div>
+    </section>
+</body>
+</html>
