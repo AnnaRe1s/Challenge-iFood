@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Cupons</title>
+    <link rel="stylesheet" href="css/cupomDesconto.css">
+</head>
+<body>
+    <!-- <div class="container"> -->
+        <div class="header">
+            <h2>Faturamento por cupons (mês vigente)</h2>
+            <p>R$ 300,00</p>
+            <div>
+                <div class="container-flex">
+                    <div>
+                        <p>Faturamento por cupom </p>
+                        <p>Mês anterior</p>
+                        <p>R$ 100,00</p>                      
+                    </div>                  
+                    <div class="container-percentagem">
+                        <div>
+                            <p>Seus cupons de desconto</p>
+                        </div>
+                    <div class="percentagem-text">
+                        <p>13%</p>
+                        <p>img</p>
+                    </div>
+                    <div>
+                        <p>que no mes anterior</p>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+            
+        <button id="add-cupom-btn">Adicionar</button>
+        </div>
+        <div class="container">
+            <div class="cupom-list">
+                <div class="cupom-item">
+                    <button class="status active">Ativo</button> 
+                    <div class="cupom-content">
+                        <div class="left-section">
+                            <p><strong>Cupom</strong><br>CupomCarna15</p>
+                            <p><strong>Faturamento Bruto:</strong><br>R$ 300,00</p>
+                            <p><strong>Faturamento Líquido:</strong><br>R$ 270,00</p>
+                        </div>
+                        <div class="right-section">
+                            <p><strong>Criado em:</strong><br>25/02/2024</p>
+                            <p><strong>Válido até:</strong><br>30/02/2024</p>
+                            <p><strong>Quantidade de usos:</strong><br>20</p>
+                        </div>
+                </div>            
+            </div>
+            <div class="cupom-list"></div>
+                <div class="cupom-item">
+                    <button class="status active">Ativo</button> 
+                    <div class="cupom-content">
+                        <div class="left-section">
+                            <p><strong>Cupom</strong><br>Cupom10</p>
+                            <p><strong>Faturamento Bruto:</strong><br>R$ 100,00</p>
+                            <p><strong>Faturamento Líquido:</strong><br>R$ 80,00</p>
+                        </div>
+                        <div class="right-section">
+                            <p><strong>Criado em:</strong><br>01/01/2024</p>
+                            <p><strong>Válido até:</strong><br>20/01/2024</p>
+                            <p><strong>Quantidade de usos:</strong><br>10</p>
+                        </div>
+                </div>            
+            </div>
+            <div class="cupom-list"></div>
+                <div class="cupom-item">
+                    <button class="status inative">Desativado</button> 
+                    <div class="cupom-content">
+                        <div class="left-section">
+                            <p><strong>Cupom</strong><br>CupomNatal15</p>
+                            <p><strong>Faturamento Bruto:</strong><br>R$ 350,00</p>
+                            <p><strong>Faturamento Líquido:</strong><br>R$ 290,00</p>
+                        </div>
+                        <div class="right-section">
+                            <p><strong>Criado em:</strong><br>25/12/2024</p>
+                            <p><strong>Válido até:</strong><br>30/12/2024</p>
+                            <p><strong>Quantidade de usos:</strong><br>15</p>
+                        </div>
+                </div> 
+            </div>           
+        </div>
+    <!-- </div> -->
+
+    <!-- Popup para adicionar cupons -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Adicionar um cupom</h2>
+            <h3> Use esse espaço para agradar seus clientes com um novo cupom de desconto</h3>
+            <form id="cupom-form">
+                
+                <input type="text" id="cupom-code" name="cupom-code" placeholder="Código do Cupom">
+                
+                <input type="text" id="discount-value" name="discount-value" placeholder="Valor do Desconto">
+            
+                <label for="dataInicio">Data de Início</label>
+                <input type="date" id="start-date" name="start-date">
+
+                <label for="dataFinal">Data Final</label>
+                <input type="date" id="end-date" name="end-date">
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cupomDesconto.js"></script>
+</body>
+</html>
