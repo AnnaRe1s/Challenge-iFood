@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/txEntregaPrin.css">
+  <title>Relatório de Entregas</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="orangeBox"> 
+        <div class="backBtn">
+          <button href="" class="back" type="button">
+            <!-- Ícone de voltar -->
+            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.39997 10.2L1.59998 5.99995L6.39997 1.79995" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="header1"> 
+          <h6 class="textPrincipal">Valor gasto com taxas de entrega</h6>
+          <h2 class="valorPrincipal">R$ 1425,00</h2> <!-- Valor atualizado -->
+        </div>
+        <div class="header2">
+          <div class="left"> 
+            <p class="textSecond">Valor médio por entrega</p>
+            <h4 class="valorSecond">R$ 4,00</h4>
+          </div>
+          <div class="right">
+            <button id="abrirModal" class="add" type="button">
+              <!-- Ícone de adicionar -->
+              <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1H1M1 5H10M7 9H1M11 9H17M14 6V12" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="filters">
+        <button class="filter-button">Mês</button>
+        <button class="filter-button">3 Meses</button>
+        <button class="filter-button">1 Ano</button>
+      </div>
+    </header>
+
+    <section class="totalEnt">
+      <div>
+        <p class="realizadas">Total de entregas realizadas</p>
+        <div class="motoSvg">
+          <!-- Ícone moto -->
+          <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.70588 26.8824V29.2353C5.70588 30.4834 6.20168 31.6803 7.0842 32.5629C7.96673 33.4454 9.16369 33.9412 10.4118 33.9412C11.6598 33.9412 12.8568 33.4454 13.7393 32.5629C14.6218 31.6803 15.1176 30.4834 15.1176 29.2353V17.4706H8.05882C6.18671 17.4706 4.39127 18.2143 3.06748 19.5381C1.7437 20.8619 1 22.6573 1 24.5294V26.8824H24.5294C25.4015 24.3627 26.9693 22.1415 29.0513 20.4759C31.1334 18.8103 33.6445 17.7683 36.2941 17.4706V5.70588C36.2941 4.4578 35.7983 3.26084 34.9158 2.37832C34.0333 1.4958 32.8363 1 31.5882 1H29.2353M8.05882 10.4118H15.1176M31.5882 29.2353C31.5882 30.4834 32.084 31.6803 32.9666 32.5629C33.8491 33.4454 35.046 33.9412 36.2941 33.9412C37.5422 33.9412 38.7392 33.4454 39.6217 32.5629C40.5042 31.6803 41 30.4834 41 29.2353C41 27.9872 40.5042 26.7903 39.6217 25.9077C38.7392 25.0252 37.5422 24.5294 36.2941 24.5294C35.046 24.5294 33.8491 25.0252 32.9666 25.9077C32.084 26.7903 31.5882 27.9872 31.5882 29.2353Z" stroke="#EE6829" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>356</p> 
+
+        </div>
+      </div>
+      <div class="media">
+        <p class="realizadas">Media comparação </p>  
+        <div class="numMedia">
+            <p >12</p> 
+            <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_2458_2670)">
+                <path d="M14.9182 10.9181C14.6743 11.162 14.3497 11.3086 14.0054 11.3302C13.6611 11.3519 13.3208 11.2471 13.0482 11.0357L12.915 10.9181L4.41503 2.41812L4.29745 2.28495L4.22095 2.17587L4.14445 2.03987L4.12037 1.98887L4.08212 1.89395L4.03678 1.74095L4.02262 1.66587L4.00845 1.58087L4.00278 1.50012L3.99995 1.41654L4.00278 1.33295L4.00987 1.25079L4.02262 1.16579L4.03678 1.09212L4.08212 0.939121L4.12037 0.844204L4.21953 0.657205L4.31161 0.529704L4.41503 0.414955L4.5482 0.297372L4.65728 0.220872L4.79328 0.144372L4.84428 0.120288L4.9392 0.0820379L5.0922 0.036705L5.16728 0.0225382L5.25228 0.0083704L5.33303 0.00270462L5.41662 -0.000128746L22.4166 -0.000128746C23.6236 -0.000128746 24.254 1.39671 23.5259 2.29912L23.4182 2.41812L14.9182 10.9181Z" fill="#C20606"/>
+                <path d="M14.9182 10.9181C14.6743 11.162 14.3497 11.3086 14.0054 11.3302C13.6611 11.3519 13.3208 11.2471 13.0482 11.0357L12.915 10.9181L4.41503 2.41812L4.29745 2.28495L4.22095 2.17587L4.14445 2.03987L4.12037 1.98887L4.08212 1.89395L4.03678 1.74095L4.02262 1.66587L4.00845 1.58087L4.00278 1.50012L3.99995 1.41654L4.00278 1.33295L4.00987 1.25079L4.02262 1.16579L4.03678 1.09212L4.08212 0.939121L4.12037 0.844204L4.21953 0.657205L4.31161 0.529704L4.41503 0.414955L4.5482 0.297372L4.65728 0.220872L4.79328 0.144372L4.84428 0.120288L4.9392 0.0820379L5.0922 0.036705L5.16728 0.0225382L5.25228 0.0083704L5.33303 0.00270462L5.41662 -0.000128746L22.4166 -0.000128746C23.6236 -0.000128746 24.254 1.39671 23.5259 2.29912L23.4182 2.41812L14.9182 10.9181Z" stroke="black"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_2458_2670" x="0" y="-0.000244141" width="27.8357" height="19.3333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2458_2670"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2458_2670" result="shape"/>
+                </filter>
+                </defs>
+                </svg>
+        </div>
+        <p class="realizadas">do último  mês </p>
+        </div>
+    </section>
+
+   <div class="graph1">
+    <p>Valor pago por entrega por dia</p>
+   <a href="extratoEntrega.html" class="extrato-link">Ver extrato &#8250;</a> 
+   <canvas id="grafico-pagamento"></canvas>
+   </div>
+   
+   <div class="graph1"> 
+    <p >Valor taxas entrega por dia</p>
+   <a href="extratoEntrega.html" class="extrato-link">Ver extrato &#8250;</a> 
+   <canvas id="grafico-taxas"></canvas>
+
+   </div>
+   
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/txEntregaPrin.js"></script>
+</body>
+</html>
