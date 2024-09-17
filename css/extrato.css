@@ -30,10 +30,6 @@ body {
   align-items: center;
 }
 
-.user-name span {
-  margin-left: 5px;
-}
-
 .saldo-container {
   text-align: center;
   margin-top: 20px;
@@ -53,25 +49,14 @@ body {
   border-radius: 10px;
 }
 
-.action-buttons button {
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  color: #ee6829;
-  display: flex;
-  align-items: center;
-}
-
 .chart-container {
   margin: 20px 0;
   padding: 20px;
   background-color: #fff9f5;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .extrato-detalhado-container {
-  margin-top: 20px;
   padding: 20px;
 }
 
@@ -79,14 +64,6 @@ body {
   color: #ee6829;
   font-weight: bold;
   margin-bottom: 20px;
-}
-
-#filterInput {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 .extrato-card {
@@ -99,30 +76,18 @@ body {
 
 .extrato-header {
   font-weight: bold;
-  color: var(--gray);
-  margin-bottom: 10px;
-}
-/*
-.entradas, .saidas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: gray;
 }
 
-.entradas-titulo, .saidas-titulo {
-  font-weight: bold;
-  color: #ee6829;
-}
-*/
 .movimento {
   display: flex;
-  justify-content: space-between; /* Descrição à esquerda e valor à direita */
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 
 .descricao {
   font-size: 16px;
-  color: #333; /* Cor da descrição */
+  color: #333;
 }
 
 .valor {
@@ -130,11 +95,11 @@ body {
 }
 
 .positivo {
-  color: #27a460; /* Cor de sucesso */
+  color: #27a460;
 }
 
 .negativo {
-  color: #c20606; /* Cor de erro */
+  color: #c20606;
 }
 
 .edit-button {
@@ -145,139 +110,24 @@ body {
   color: #ee6829;
 }
 
-/*Incluindo tela de editar*/
-
-
-/* Estilos para o modal */
-.modal {
-  display: none; /* Oculto por padrão */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro */
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-form label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-form input,
-form select {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  background-color: #ee6829;
+.back-button i,
+.notification-button i {
+  font-size: 24px;
   color: white;
-  padding: 10px;
+}
+
+.filter-button i,
+.add-button i {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  font-size: 18px;
+  color: #ee6829;
+}
+
+.action-buttons button {
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 10px;
-}
-
-form button:hover {
-  background-color: #d75f28;
-}
-
-
-
-
-
-
-/*
-// modelo 2
-.extrato-detalhado-container {
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.extrato-detalhado-container h2 {
+  font-size: 16px;
   color: #ee6829;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.extrato-card {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-}
-
-.extrato-header {
-  font-weight: bold;
-  color: var(--gray);
-  margin-bottom: 10px;
-}
-
-.entradas, .saidas {
-  margin-bottom: 10px;
-}
-
-.entradas-titulo, .saidas-titulo {
-  font-weight: bold;
-  color: #ee6829;
-  margin-bottom: 5px;
-}
-
-.movimento {
   display: flex;
-  justify-content: space-between; /* Descrição à esquerda e valor à direita */
-  /*
-  margin-bottom: 5px;
+  align-items: center;
 }
-
-.descricao {
-  font-size: 16px;
-  color: #333; /* Cor da descrição *//*
-}
-
-.valor {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.positivo {
-  color: #27a460; /* Cor para valores positivos *//*
-}
-
-.negativo {
-  color: #c20606; /* Cor para valores negativos *//*
-}
-*/

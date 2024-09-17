@@ -5,19 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extrato Bancário</title>
   <link rel="stylesheet" href="./css/extrato.css" />
-  <!-- Adicionando o Chart.js para o gráfico -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Link para o Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+<!--<div class="header-container">-->
+<!--  <div class="header-top">-->
+<!--    <button class="back-button">-->
+<!--      <img src="./assets/back-icon.png" alt="Voltar" />-->
+<!--    </button>-->
+<!--    <span class="user-name">Pessoa <span>&#9662;</span></span>-->
+<!--    <button class="notification-button">-->
+<!--      <img src="./assets/notification-icon.png" alt="Notificações" />-->
+<!--    </button>-->
+<!--  </div>-->
+<!--  -->
+
+<!--  <div class="saldo-container">-->
+<!--    <span>Saldo</span>-->
+<!--    <h1>R$ 679,28</h1>-->
+<!--  </div>-->
+
+<!--  <div class="action-buttons">-->
+<!--    <button class="filter-button">Filtro</button>-->
+<!--    <button class="add-button">Adicionar</button>-->
+<!--  </div>-->
+
+<!--  <div class="chart-container">-->
+<!--    <canvas id="faturamentoChart" width="400" height="200"></canvas>-->
+<!--  </div>-->
+<!--</div>-->
+
 <div class="header-container">
   <!-- Cabeçalho -->
   <div class="header-top">
     <button class="back-button">
-      <img src="./assets/back-icon.png" alt="Voltar" />
+      <i class="fas fa-arrow-left"></i> <!-- Ícone de Voltar -->
     </button>
     <span class="user-name">Pessoa <span>&#9662;</span></span>
     <button class="notification-button">
-      <img src="./assets/notification-icon.png" alt="Notificações" />
+      <i class="fas fa-bell"></i> <!-- Ícone de Notificações -->
     </button>
   </div>
 
@@ -29,8 +58,12 @@
 
   <!-- Botões de filtro e adicionar -->
   <div class="action-buttons">
-    <button class="filter-button">Filtro</button>
-    <button class="add-button">Adicionar</button>
+    <button class="filter-button">
+      <i class="fas fa-filter"></i> Filtro <!-- Ícone de Filtro -->
+    </button>
+    <button class="add-button">
+      <i class="fas fa-plus-circle"></i> Adicionar <!-- Ícone de Adicionar -->
+    </button>
   </div>
 
   <!-- Gráfico de Faturamento -->
@@ -39,33 +72,9 @@
   </div>
 </div>
 
-<!-- Extrato Detalhado -->
 <div class="extrato-detalhado-container">
   <h2>Extrato Detalhado</h2>
 
-  <!-- Filtro -->
-  <input type="text" id="filterInput" placeholder="Filtrar por descrição..." onkeyup="filterExtrato()">
-
-  <!-- Transações -->
-  <div class="extrato-card">
-    <div class="extrato-header">
-      <span>01/03/2023 - Quarta-feira</span>
-    </div>
-    <div class="entradas">
-      <p class="entradas-titulo">entradas</p>
-      <p>ifood ltda <span class="valor positivo">R$ 530,75</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-    <div class="saidas">
-      <p class="saidas-titulo">saídas</p>
-      <p>Taxa entrega ifood <span class="valor negativo">R$ 151,23</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-  </div>
-
-  <!-- Transação 1 -->
   <div class="extrato-card">
     <div class="extrato-header">
       <span>01/03/2023 - Quarta-feira</span>
@@ -75,6 +84,7 @@
       <p class="movimento">
         <span class="descricao">ifood ltda</span>
         <span class="valor positivo">R$ 530,75</span>
+        <button class="edit-button" onclick="editTransaction(this)">✎</button>
       </p>
     </div>
     <div class="saidas">
@@ -82,42 +92,33 @@
       <p class="movimento">
         <span class="descricao">Taxa entrega ifood</span>
         <span class="valor negativo">R$ 151,23</span>
+        <button class="edit-button" onclick="editTransaction(this)">✎</button>
       </p>
     </div>
-    <!-- Repetição de outras transações -->
-    <!-- Adicionar mais divs como essa para mais dias de transação -->
-
-    <!-- Modal de edição de transação -->
-    <div id="editModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Editar Transação</h2>
-        <form id="editTransactionForm">
-          <label for="descricao">Descrição</label>
-          <input type="text" id="descricao" name="descricao" required>
-
-          <label for="valor">Valor</label>
-          <input type="number" id="valor" name="valor" required>
-
-          <label for="tipo">Tipo</label>
-          <select id="tipo" name="tipo">
-            <option value="entrada">Entrada</option>
-            <option value="saida">Saída</option>
-          </select>
-
-          <button type="submit">Salvar</button>
-        </form>
-      </div>
-    </div>
-    <div class="movimento">
-      <span class="descricao">ifood ltda</span>
-      <span class="valor positivo">R$ 530,75</span>
-      <button class="edit-button" onclick="editTransaction(this)">✎</button>
-    </div>
-
   </div>
 
-  <!-- Script para gerar o gráfico e manipular a interação -->
-  <script src="./js/extrato.js"></script>
+  <!-- Transações adicionais -->
+  <div class="extrato-card">
+    <div class="extrato-header">
+      <span>02/03/2023 - Quinta-feira</span>
+    </div>
+    <div class="entradas">
+      <p class="movimento">
+        <span class="descricao">Mercado Caipira</span>
+        <span class="valor positivo">R$ 410,78</span>
+        <button class="edit-button" onclick="editTransaction(this)">✎</button>
+      </p>
+    </div>
+    <div class="saidas">
+      <p class="movimento">
+        <span class="descricao">Loja de embalagens</span>
+        <span class="valor negativo">R$ 721,10</span>
+        <button class="edit-button" onclick="editTransaction(this)">✎</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="./js/extrato.js"></script>
 </body>
 </html>
