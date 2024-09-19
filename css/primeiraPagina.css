@@ -101,6 +101,7 @@ a {
 
 .card-main-porcentagem h4 {
   font-size: 25px;
+  color: var(--black);
 }
 
 .card-main-car {
@@ -123,6 +124,7 @@ a {
 .entrega-done h4 {
   font-size: 24px;
   font-weight: 600;
+  color: var(--black);
 }
 
 .entrega-porcentagem {
@@ -143,6 +145,7 @@ a {
 .entrega-porcentagem h4 {
   font-size: 24px;
   font-weight: 600;
+  color: var(--black);
 }
 
 .main-faturamento {
@@ -153,7 +156,7 @@ a {
 .main-faturamento h4 {
   font-size: 21px;
   font-weight: 700;
-  color: black;
+  color: var(--black);
   margin-bottom: 20px;
 }
 
