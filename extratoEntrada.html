@@ -1,92 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editar Dados de Entrada</title>
     <link rel="stylesheet" href="./css/extrato.css" />
+    <link rel="stylesheet" href="./css/txEntrega.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-<!-- Cabeçalho e saldo mantidos da tela anterior -->
-<div class="header-container">
-    <div class="header-top">
-        <button class="back-button">
-            <i class="fas fa-arrow-left"></i> <!-- Ícone de volta -->
-        </button>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho e saldo mantidos da tela anterior -->
+    <div class="header-container">
+      <div class="header-top">
+        <a href="primeiraPagina.html">
+          <button class="back" type="button">
+            <svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.39997 10.2L1.59998 5.99995L6.39997 1.79995"
+                stroke="#EE6829"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </a>
         <span class="user-name">Pessoa <span>&#9662;</span></span>
-        <button class="notification-button">
-            <i class="fas fa-bell"></i> <!-- Ícone de notificações -->
-        </button>
-    </div>
 
-    <div class="saldo-container">
+        <a href="primeiraPagina.html">
+          <button class="back" type="button">
+            <i class="fas fa-bell"></i>
+          </button>
+        </a>
+      </div>
+
+      <div class="saldo-container">
         <span>Saldo</span>
         <h1>R$ 679,28</h1>
-    </div>
+      </div>
 
-    <div class="action-buttons">
+      <div class="action-buttons">
         <button class="filter-button">
-            <i class="fas fa-filter"></i> Filtro
+          <i class="fas fa-filter"></i> Filtro
         </button>
         <button class="add-button">
-            <i class="fas fa-plus-circle"></i> Adicionar
+          <i class="fas fa-plus-circle"></i> Adicionar
         </button>
-    </div>
+      </div>
 
-    <div class="chart-container">
+      <div class="chart-container">
         <canvas id="faturamentoChart" width="400" height="200"></canvas>
+      </div>
     </div>
-</div>
 
-<!-- Seção para edição de dados de entrada -->
-<div class="extrato-detalhado-container">
-    <h2>Edição de Dados</h2>
+    <!-- Seção para edição de dados de entrada -->
+    <div class="extrato-detalhado-container">
+      <h2>Edição de Dados</h2>
 
-    <!-- Área de edição dinâmica, a ser atualizada ao clicar no lápis -->
-    <div id="editArea" class="extrato-card">
+      <!-- Área de edição dinâmica, a ser atualizada ao clicar no lápis -->
+      <div id="editArea" class="extrato-card">
         <div id="card_1" class="extrato-card">
-            <div class="extrato-header">
-                <span>01/03/2023 - Quarta-feira</span>
-            </div>
-            <div class="entradas">
-                <p class="movimento">
-                    <span class="descricao">ifood ltda</span>
-                    <span class="valor positivo">R$ 530,75</span>
-                    <button class="edit-button" onclick="openEditInCard('card_1', '01/03/2023', 'ifood ltda', 'R$ 530,75')">✎</button>
-                </p>
-            </div>
-            <div class="saidas">
-                <p class="movimento">
-                    <span class="descricao">Taxa entrega ifood</span>
-                    <span class="valor negativo">R$ 151,23</span>
-                </p>
-            </div>
+          <div class="extrato-header">
+            <span>01/03/2023 - Quarta-feira</span>
+          </div>
+          <div class="entradas">
+            <p class="movimento">
+              <span class="descricao">ifood ltda</span>
+              <span class="valor positivo">R$ 530,75</span>
+              <button
+                class="edit-button"
+                onclick="openEditInCard('card_1', '01/03/2023', 'ifood ltda', 'R$ 530,75')"
+              >
+                ✎
+              </button>
+            </p>
+          </div>
+          <div class="saidas">
+            <p class="movimento">
+              <span class="descricao">Taxa entrega ifood</span>
+              <span class="valor negativo">R$ 151,23</span>
+            </p>
+          </div>
         </div>
 
         <div id="card_2" class="extrato-card">
-            <div class="extrato-header">
-                <span>02/03/2023 - Quinta-feira</span>
-            </div>
-            <div class="entradas">
-                <p class="movimento">
-                    <span class="descricao">Mercado Caipira</span>
-                    <span class="valor positivo">R$ 410,78</span>
-                    <button class="edit-button" onclick="openEditInCard('card_2', '02/03/2023', 'Mercado Caipira', 'R$ 410,78')">✎</button>
-                </p>
-            </div>
-            <div class="saidas">
-                <p class="movimento">
-                    <span class="descricao">Loja de embalagens</span>
-                    <span class="valor negativo">R$ 721,10</span>
-                </p>
-            </div>
+          <div class="extrato-header">
+            <span>02/03/2023 - Quinta-feira</span>
+          </div>
+          <div class="entradas">
+            <p class="movimento">
+              <span class="descricao">Mercado Caipira</span>
+              <span class="valor positivo">R$ 410,78</span>
+              <button
+                class="edit-button"
+                onclick="openEditInCard('card_2', '02/03/2023', 'Mercado Caipira', 'R$ 410,78')"
+              >
+                ✎
+              </button>
+            </p>
+          </div>
+          <div class="saidas">
+            <p class="movimento">
+              <span class="descricao">Loja de embalagens</span>
+              <span class="valor negativo">R$ 721,10</span>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
-</div>
-
-<script src="./js/extrato.js"></script>
-</body>
+    <script src="./js/extrato.js"></script>
+  </body>
 </html>

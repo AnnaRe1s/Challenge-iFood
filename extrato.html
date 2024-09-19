@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extrato Bancário</title>
-  <link rel="stylesheet" href="./css/extrato.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Link para o Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extrato Bancário</title>
+    <link rel="stylesheet" href="./css/extrato.css" />
+    <link rel="stylesheet" href="./css/txEntrega.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link para o Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<body>
-<!--<div class="header-container">-->
-<!--  <div class="header-top">-->
-<!--    <button class="back-button">-->
-<!--      <img src="./assets/back-icon.png" alt="Voltar" />-->
-<!--    </button>-->
-<!--    <span class="user-name">Pessoa <span>&#9662;</span></span>-->
-<!--    <button class="notification-button">-->
-<!--      <img src="./assets/notification-icon.png" alt="Notificações" />-->
-<!--    </button>-->
-<!--  </div>-->
-<!--  -->
+  <body>
+    <div class="header-container">
+      <!-- Cabeçalho -->
+      <div class="header-top">
+        <a href="primeiraPagina.html">
+          <button class="back" type="button">
+            <svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.39997 10.2L1.59998 5.99995L6.39997 1.79995"
+                stroke="#EE6829"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </a>
+        <span class="user-name">Pessoa <span>&#9662;</span></span>
 
-<!--  <div class="saldo-container">-->
-<!--    <span>Saldo</span>-->
-<!--    <h1>R$ 679,28</h1>-->
-<!--  </div>-->
+        <a href="primeiraPagina.html">
+          <button class="back" type="button">
+            <i class="fas fa-bell"></i>
+          </button>
+        </a>
+      </div>
 
-<!--  <div class="action-buttons">-->
-<!--    <button class="filter-button">Filtro</button>-->
-<!--    <button class="add-button">Adicionar</button>-->
-<!--  </div>-->
+      <!-- Saldo -->
+      <div class="saldo-container">
+        <span>Saldo</span>
+        <h1>R$ 679,28</h1>
+      </div>
 
-<!--  <div class="chart-container">-->
-<!--    <canvas id="faturamentoChart" width="400" height="200"></canvas>-->
-<!--  </div>-->
-<!--</div>-->
+      <!-- Botões de filtro e adicionar -->
+      <div class="action-buttons">
+        <button class="filter-button">
+          <i class="fas fa-filter"></i> Filtro
+          <!-- Ícone de Filtro -->
+        </button>
+        <button class="add-button">
+          <i class="fas fa-plus-circle"></i> Adicionar
+          <!-- Ícone de Adicionar -->
+        </button>
+      </div>
 
-<div class="header-container">
-  <!-- Cabeçalho -->
-  <div class="header-top">
-    <button class="back-button">
-      <i class="fas fa-arrow-left"></i> <!-- Ícone de Voltar -->
-    </button>
-    <span class="user-name">Pessoa <span>&#9662;</span></span>
-    <button class="notification-button">
-      <i class="fas fa-bell"></i> <!-- Ícone de Notificações -->
-    </button>
-  </div>
-
-  <!-- Saldo -->
-  <div class="saldo-container">
-    <span>Saldo</span>
-    <h1>R$ 679,28</h1>
-  </div>
-
-  <!-- Botões de filtro e adicionar -->
-  <div class="action-buttons">
-    <button class="filter-button">
-      <i class="fas fa-filter"></i> Filtro <!-- Ícone de Filtro -->
-    </button>
-    <button class="add-button">
-      <i class="fas fa-plus-circle"></i> Adicionar <!-- Ícone de Adicionar -->
-    </button>
-  </div>
-
-  <!-- Gráfico de Faturamento -->
-  <div class="chart-container">
-    <canvas id="faturamentoChart" width="400" height="200"></canvas>
-  </div>
-</div>
-
-<div class="extrato-detalhado-container">
-  <h2>Extrato Detalhado</h2>
-
-  <div class="extrato-card">
-    <div class="extrato-header">
-      <span>01/03/2023 - Quarta-feira</span>
+      <!-- Gráfico de Faturamento -->
+      <div class="chart-container">
+        <canvas id="faturamentoChart" width="400" height="200"></canvas>
+      </div>
     </div>
-    <div class="entradas">
-      <p class="entradas-titulo">entradas</p>
-      <p class="movimento">
-        <span class="descricao">ifood ltda</span>
-        <span class="valor positivo">R$ 530,75</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-    <div class="saidas">
-      <p class="saidas-titulo">saídas</p>
-      <p class="movimento">
-        <span class="descricao">Taxa entrega ifood</span>
-        <span class="valor negativo">R$ 151,23</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-  </div>
 
-  <!-- Transações adicionais -->
-  <div class="extrato-card">
-    <div class="extrato-header">
-      <span>02/03/2023 - Quinta-feira</span>
-    </div>
-    <div class="entradas">
-      <p class="movimento">
-        <span class="descricao">Mercado Caipira</span>
-        <span class="valor positivo">R$ 410,78</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-    <div class="saidas">
-      <p class="movimento">
-        <span class="descricao">Loja de embalagens</span>
-        <span class="valor negativo">R$ 721,10</span>
-        <button class="edit-button" onclick="editTransaction(this)">✎</button>
-      </p>
-    </div>
-  </div>
-</div>
+    <div class="extrato-detalhado-container">
+      <h2>Extrato Detalhado</h2>
 
-<script src="./js/extrato.js"></script>
-</body>
+      <div class="extrato-card">
+        <div class="extrato-header">
+          <span>01/03/2023 - Quarta-feira</span>
+        </div>
+        <div class="entradas">
+          <p class="entradas-titulo">entradas</p>
+          <p class="movimento">
+            <span class="descricao">ifood ltda</span>
+            <span class="valor positivo">R$ 530,75</span>
+            <button class="edit-button" onclick="editTransaction(this)">
+              ✎
+            </button>
+          </p>
+        </div>
+        <div class="saidas">
+          <p class="saidas-titulo">saídas</p>
+          <p class="movimento">
+            <span class="descricao">Taxa entrega ifood</span>
+            <span class="valor negativo">R$ 151,23</span>
+            <button class="edit-button" onclick="editTransaction(this)">
+              ✎
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <!-- Transações adicionais -->
+      <div class="extrato-card">
+        <div class="extrato-header">
+          <span>02/03/2023 - Quinta-feira</span>
+        </div>
+        <div class="entradas">
+          <p class="movimento">
+            <span class="descricao">Mercado Caipira</span>
+            <span class="valor positivo">R$ 410,78</span>
+            <button class="edit-button" onclick="editTransaction(this)">
+              ✎
+            </button>
+          </p>
+        </div>
+        <div class="saidas">
+          <p class="movimento">
+            <span class="descricao">Loja de embalagens</span>
+            <span class="valor negativo">R$ 721,10</span>
+            <button class="edit-button" onclick="editTransaction(this)">
+              ✎
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/extrato.js"></script>
+  </body>
 </html>
-
-
