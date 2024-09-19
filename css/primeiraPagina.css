@@ -1,0 +1,167 @@
+body {
+  background-color: var(--white-text-color);
+}
+.header-person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 90px;
+}
+
+.header-person-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-person-text h1 {
+  font-weight: 400;
+  text-align: left;
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.bell {
+  color: var(--primary-color);
+  background-color: var(--color-secondary);
+  border-radius: 360px;
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+.budget-avaliable {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 27px;
+  margin-left: 30px;
+}
+
+.budget-avaliable h2 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.budget-avaliable h3 {
+  font-weight: 600;
+  font-size: 35px;
+  padding-top: 5px;
+}
+
+/*  Cards */
+
+.card {
+  margin: 15px 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: -3px 5px 19px 7px #8d8d8d70;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-header h4 {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 200;
+  margin: 10px 0px;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-main div {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 12px 0px;
+}
+
+.card-main-porcentagem h4 {
+  font-size: 25px;
+}
+
+.card-main-car {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-main-entrega {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.entrega-done div {
+  margin: 5px;
+}
+
+.entrega-done h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.entrega-porcentagem {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 133px;
+  font-size: 12px;
+}
+
+.entrega-porcentagem div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.entrega-porcentagem h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main-faturamento {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-faturamento h4 {
+  font-size: 21px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.btn-see {
+  background-color: var(--primary-color);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}

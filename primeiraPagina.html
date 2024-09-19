@@ -3,9 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/primeiraPagina.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link para o Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>home</title>
   </head>
   <body>
-    <h1>PRIMEIRA PAGINA</h1>
+    <div class="header-person">
+      <img src="./assets/IconImage.png" alt="" />
+      <div class="header-person-text">
+        <h1>Ola, Pessoa Sobrenome</h1>
+        <p>Nome da empresa</p>
+      </div>
+      <button class="bell" type="button">
+        <i class="fas fa-bell"></i>
+      </button>
+    </div>
+
+    <div class="budget-avaliable">
+      <h2>Saldo disponivel</h2>
+      <h3>R$ 0,00</h3>
+      <a href="./extrato.html">
+        <p>Ver extrato ></p>
+      </a>
+    </div>
+
+    <!-- cards -->
+    <!-- cupons -->
+    <div class="card">
+      <a href="./cupomDesconto.html">
+        <!-- header -->
+        <div class="card-header">
+          <h4>Cupons</h4>
+          <div>
+            <p>3 ativos</p>
+            <p>10 gerados</p>
+          </div>
+        </div>
+
+        <!-- main -->
+        <div class="card-main">
+          <p>Seus cupons de descontos</p>
+          <div>
+            <div class="card-main-porcentagem">
+              <img src="./assets/Vector.png" alt="" />
+              <h4>13%</h4>
+            </div>
+            <p>Mais utilizados que no mês anterior</p>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <button class="btn-see">Ver mais +</button>
+      </a>
+    </div>
+
+    <!--  taxa de entrega -->
+    <div class="card">
+      <a href="./extratoEntrega.html">
+        <!-- header -->
+        <div class="card-header">
+          <h4>Taxas de entregas</h4>
+        </div>
+
+        <!-- main -->
+        <div class="card-main-entrega">
+          <div class="entrega-done">
+            <p>Total de entregas realizadas</p>
+            <div class="card-main-car">
+              <img src="./assets/Vector (1).png" alt="" />
+              <h4>13%</h4>
+            </div>
+            <p>*mês vigente</p>
+          </div>
+
+          <div class="entrega-porcentagem">
+            <p>Total de em relação ao mês anterior</p>
+            <div>
+              <img src="./assets/Vector (2).png" alt="" />
+              <h4>12</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <button class="btn-see">Ver mais +</button>
+      </a>
+    </div>
+
+    <!--  campeao de vendas   -->
+    <div class="card">
+      <a href="./localidades.html">
+        <!-- header -->
+        <div class="card-header">
+          <h4>Campeão de vendas</h4>
+        </div>
+
+        <!-- main -->
+        <div class="main-faturamento">
+          <p>As o bairro que você mais vendeu esse mes foi</p>
+          <h4>Bairro Santa Terezinha - SP</h4>
+          <div>
+            <p>Faturamento de</p>
+            <h4>8.124,76</h4>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <button class="btn-see">Ver mais +</button>
+      </a>
+    </div>
   </body>
 </html>
