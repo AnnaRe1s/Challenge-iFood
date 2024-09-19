@@ -1,3 +1,7 @@
+.btn-voltar {
+  background-color: red;
+}
+
 .register-header-form {
   display: flex;
   flex-direction: column;

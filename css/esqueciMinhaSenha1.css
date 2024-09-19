@@ -1,114 +1,116 @@
-* {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-  }
-  
-
-:root {
-    --primary-color: #ee6829;
-    --color-secondary: #ffe8bc;
-    --white-text-color: #fff9f5;
-    --white: #fff9f5;
-    --black-text-color: #2b2b2b;
-    --sucess-color: #27a460;
-    --error-color: #c20606;
-    --black: #000;
-    --gray: #828282;
-}
 body {
-    overflow: hidden;
-    max-height: 100vh;
-    max-width: 100vw;
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
 }
-
 
 img {
-   margin: 0 auto;
-   width: 262px;
-   height: 170px; 
+  margin: 0 auto;
+  width: 262px;
+  height: 170px;
 }
 
 .container {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .content-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container {
-    width: 100%; 
-    margin: 0 auto;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 80%;
-    padding: 20px;
-  }
-  
-  input[type="email"] {
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    width: 80%;
-    height: 24px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-  input[type="email"]::placeholder {
-    color: var(--primary-color);
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+}
 
-  
-  button {
-    padding: 10px 60px;
-    height: 50px;
-    background-color: var(--primary-color); 
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px; 
-    width: 100%;
-    margin: 0 auto;
-  }
+input[type="email"] {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  width: 80%;
+  height: 24px;
+}
+
+input[type="email"]::placeholder {
+  color: var(--primary-color);
+}
+
+button {
+  padding: 10px 60px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 h1 {
-    color: var(--primary-color);
-    text-align: center;
-    margin: 0 auto;
-    font-weight: 300;
-    margin-top: 90px;
-}  
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-top: 90px;
+}
 
 .text1 {
-    color: var(--gray);
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 10px;
+  color: var(--gray);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
 }
-.text2, a {
-    text-align: center;
-    text-decoration: none;
-    color: var(--primary-color);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 100%;
-    text-wrap: nowrap;
-    font-size: 12px;
+.text2,
+a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-wrap: nowrap;
+  font-size: 12px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: left;
+  background-color: var(--white);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.back-button i {
+  margin-right: 6px;
+}
+
+.back-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }

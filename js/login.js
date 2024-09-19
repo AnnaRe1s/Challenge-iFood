@@ -51,3 +51,13 @@ confirmPassword.addEventListener("input", () => {
     toggleErrorMessage(notMatchPasswordErrorMessage, !passwordsMatch);
   }
 });
+
+// enviar para esqueci a minha senha?
+
+function redirectToforgotMyPassword() {
+  window.location.href = "esqueciMinhaSenhaPag1.html";
+}
+
+function redirectToFristPage() {
+  window.location.href = "primeiraPagina.html";
+}
