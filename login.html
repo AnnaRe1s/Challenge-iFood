@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <form action="post" method="post" onsubmit="return validateForm()">
+      <form>
         <input
           type="email"
           name="email"
@@ -55,10 +55,22 @@
           Este campo é obrigatório.
         </span>
 
-        <button type="button" class="text-btn">esqueci minha senha</button>
-
-        <button class="button-overWhite" type="submit">Entrar</button>
+        <button
+          type="button"
+          class="text-btn"
+          onclick="return redirectToforgotMyPassword()"
+        >
+          esqueci minha senha
+        </button>
       </form>
+      <a href="primeiraPagina.html">
+        <button
+          class="button-overWhite"
+          onsubmit="return redirectToFristPage()"
+        >
+          Entrar
+        </button>
+      </a>
     </div>
 
     <script src="./js/login.js"></script>

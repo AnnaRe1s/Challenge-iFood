@@ -1,237 +1,263 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary-color: #ee6829;
-    --color-secondary: #ffe8bc;
-    --white-text-color: #fff9f5;
-    --white: #fff9f5;
-    --black-text-color: #2b2b2b;
-    --sucess-color: #27a460;
-    --error-color: #c20606;
-    --black: #000;
-    --gray: #828282;
-  }
+  --primary-color: #ee6829;
+  --color-secondary: #ffe8bc;
+  --white-text-color: #fff9f5;
+  --white: #fff9f5;
+  --black-text-color: #2b2b2b;
+  --sucess-color: #27a460;
+  --error-color: #c20606;
+  --black: #000;
+  --gray: #828282;
+}
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    margin: 0;
-    padding: 0px;
+  max-width: 600px;
+  margin: 0;
+  padding: 0px;
 }
 
 .header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    border-radius: 0px 0px 8px 8px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  border-radius: 0px 0px 8px 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800%;
 }
 
 .header h2 {
-    margin: 0;
-    font-size: 15px;
-    text-align: left;
-    word-wrap: break-word;
-    width: 100%;
-    max-width: 800%;
+  margin: 0;
+  font-size: 19px;
+  text-align: left;
+  word-wrap: break-word;
+  width: 100%;
+  max-width: 800%;
 }
 
 .header p {
-    margin: 0;
-    font-size: 12px;
-    text-align: left;
-    font-weight: bold;
-    word-wrap: break-word;
-    width: 100%;
-    max-width: 800%;
-    white-space: pre-wrap;
+  margin: 0;
+  font-size: 15px;
+  text-align: left;
+  word-wrap: break-word;
+  width: 100%;
+  max-width: 800%;
+  white-space: pre-wrap;
 }
 
 .header h3 {
-    margin: 10;
-    font-size: 13px;
-    text-align: left;
+  margin: 10;
+  font-size: 13px;
+  text-align: left;
 }
 
-
 .header button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: white;
-    color: var(--primary-color);
-    border: 2px solid white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 .header button:hover {
-    background-color: var(--primary-color);
-    color: white;
+  background-color: var(--primary-color);
+  color: white;
 }
 
-.container-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.faturamento p {
+  padding: 3px 0px;
 }
 
 .container-percentagem {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  flex-wrap: wrap;
+}
+.container-percentagem p {
+  padding: 3px 0px;
 }
 
-.percentagem-text{
-    display: flex;
-    flex-direction: row;
-    align-items: self-start;
-    text-align: center;
+.percentagem-text {
+  display: flex;
+  flex-direction: row;
+  align-items: self-start;
+  text-align: center;
 }
-
 
 .cupom-list {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .cupom-item {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin: 20px;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 20px;
 }
 
 .cupom-item p {
-    margin: 5px 0;
-    font-weight: bold;
+  margin: 5px 0;
+  font-weight: bold;
 }
 
 .cupom-item strong {
-    color: gray;
-    font-size: 12px;
+  color: gray;
+  font-size: 12px;
 }
 
 .cupom-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
 }
 
-
-.left-section, .right-section {
-    width: 45%;
+.left-section,
+.right-section {
+  width: 45%;
 }
 
-.left-section p, .right-section p {
-    margin: 10px 0;
-    font-size: 0.9em;
-    line-height: 1.4;
+.left-section p,
+.right-section p {
+  margin: 10px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 .status {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    border: none;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  border: none;
 }
 
 .active {
-    background-color: var(--sucess-color);
-    color: white;
+  background-color: var(--sucess-color);
+  color: white;
 }
 
 .inative {
-    background-color: var(--error-color);
-    color: white;
+  background-color: var(--error-color);
+  color: white;
 }
-
 
 /* Popup */
 .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup-content {
-    background-color: white;
-    padding: 20px;
-    margin: 15% auto;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 8px;
-    position:relative;
+  background-color: white;
+  padding: 20px;
+  margin: 15% auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  position: relative;
 }
 
-.popup-content h2{
-   color: var(--primary-color);
-   text-align: center;
+.popup-content h2 {
+  color: var(--primary-color);
+  text-align: center;
 }
 
-.popup-content h3{
-    color: gray;
-    text-align: center;
-    font-size: 13px;
-    margin-bottom: 25px;
- }
+.popup-content h3 {
+  color: gray;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
 }
-
 
 form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);   
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
-form label{
-    color: var(--primary-color);
-    font-size: 12px;;
+form label {
+  color: var(--primary-color);
+  font-size: 12px;
 }
 
 form button {
-    width: 100%;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: left;
+  background-color: var(--white);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.back-button i {
+  margin-right: 6px;
+}
+
+.back-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
